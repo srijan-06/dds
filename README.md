@@ -1,4 +1,4 @@
-# SMART RING WITH BODY VITAL SENSORS
+# Frequency Modulation and Transmission Muffler
 
 <!-- First Section -->
 ## Team Details
@@ -7,9 +7,9 @@
 
   > Semester: 3rd Sem B. Tech. CSE
 
-  > Section: S2
+  > Section: S1
 
-  > Member-1: Vamshi Chethan A M , 231CS162 , .231cs162@nitk.edu.in 
+  > Member-1: Vamshi Chethan A M , 231CS162 , vamshichethanam.231cs162@nitk.edu.in 
 
   > member-2: Maley Srijan , 231CS133 , srijan.231cs133@nitk.edu.in
 
@@ -20,8 +20,16 @@
 ## Abstract
 <details>
   <summary>Detail</summary>
-  
-   THE SMART RING is a wearable heart attack detecting equipment which can be used in our day to day life to indicate the condition of the heart. It helps to detect heart attack and helps a person to seek for an emergency help. This was specially designed in order to help the people who suffer from minor or severe heart diseases. SMART RINGS are capable of monitoring your heart rate throughout the day and night, which can offer insights, like resting heart rate and when your heart rate is unexpectedly high or low. Some can also use that heart rate sensor to measure heart rate variability, which is the measurement of intervals between heart beats, and can be an indicator of stress. Wearable devices that detect heart rate can be helpful for improving exercise habits and eating behaviours, and they can provide motivation to lead a healthier lifestyle – all of which contribute to lowering the risk of heart disease. Smart rings are built in such a way that their core can rely on similar hardware to deliver core ring features. It also has sensor to sense the body temperature ,oxygen level and also supplies the oxygen in emergency case. The reading from these sensors can be used to send an alert message to the nearby health facility .  
-Lately, there has been many cases of heart attacks even when it comes to the people who were considered to be medically healthy. Recently, heart attack has not only been a common problem among the senior citizens, it has been a concern for youngsters as well. The rate of heart attack among the youngsters seem to be increasing rapidly   compared to that of the senior citizens. Such cases have inspired us to lay our minds on a device like SMART RING. These smart rings can be considered unique and different from other devices like watches because they do not given 'an additional device on your body' kind of look. Instead, these small rings are very easy to wear and carry it daily like a part of your body.  Heavier gadgets like watches are not required in order to keep your health intact. The SMART RING can be worn as an ornament as well. So basically, it is a very convenient and useful device to maintain a good health. This SMART RING also helps in showing the amount of oxygen that is needed by the patient which helps providing the proper required amount of oxygen.     
+   In a generation of advanced development, and wireless technologies, the scope for secure transmission of data and prevention of intercepting data is growing with time. This calls for the ability to control and conquer the analyzation of the frequency bandwidth range for better encryption settlement, and study frequency operations & their impact on system performance. The ability to encrypt messages such that restricted authoritarians have access, disrupting all the other possible incoming disturbances. Therefore, by disrupting transmission and modulation, secure zones can be created where only authorized communication is possible.  
+   Implementing wave disruptors to control communication can be utilized in certain areas during certain Law operations in the notion of reduced coordination within the group. And, in environments where multiple communication devices operate on the same frequency, a disruptor can also be used to study frequency congestion and its impact on system performance. This enables the development of better strategies for frequency transmission and management. This defines the equipment of the disruptor to be capable of operating across different frequency bands allowing it to focus on disrupting only certain types of signals while leaving others unaffected. The disruptor will be able to operate on multiple different frequency bands to disrupt these diverse communication protocols at the same time by interference having the ability to detect active frequencies and modulations in real-time, offering feedback on the strength and type of signal being transmitted.
+
+</details>
+<!--Third Section -->
+## References
+<details>
+  <summary>Know More</summary>
+      1. Cognitive Radio Communications and Networks: by Alexander M. Wyglinski, Maziar Nekovee, and Y. Thomas Hou
+      2. [Working of Signal Interference - CyberInsight](https://cyberinsight.co/how-does-jamming-work/)
+      3. [Radio Jamming - Wikipedia](https://en.wikipedia.org/wiki/Radio_jamming)
 
 </details>
