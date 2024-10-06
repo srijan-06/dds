@@ -7,13 +7,13 @@
   <br/>
   <p>
     <b>Semester:</b> 3rd Sem B. Tech. CSE<br/>
-    <b>Section:</b> S1B<br/>
+    <b>Section:</b> S1<br/>
     <b>Team - ID:</b> S1 - T12<br/>
     <b>Members:</b>
     <ol>
-      <li>Vamshi Chethan A M , 231CS162 , vamshichethanam.231cs162@nitk.edu.in </li>
+      <li>Jeferson Pravalto , 231CS131 , jeferson.231cs131@nitk.edu.in</li>
       <li>Maley Srijan , 231CS133 , srijan.231cs133@nitk.edu.in</li>
-      <li>Jeferson Pravalto , 221CS226 , jeferson.231cs131@nitk.edu.in</li>
+      <li>Vamshi Chethan A M , 231CS162 , vamshichethanam.231cs162@nitk.edu.in</li>
     </ol>
   </p>
 </details>
