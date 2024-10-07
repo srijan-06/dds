@@ -51,9 +51,14 @@
 <details>
   <summary>See More</summary>
   
-![S1-T12 drawio](---)
+  ### Schematic Block Diagram of Functionality
+  ![Schematic Diagram S1-T12](https://github.com/user-attachments/assets/8bc26c6c-8e98-4281-911a-829015f4e7b9)
 
+  ### Circuital Diagram
+  ![Circuital Diagram S1-T12](https://github.com/user-attachments/assets/5bf039be-73b7-43d9-a54a-f85d61c3bbb6)
+  
 </details>
+
 
 <!-- Third Section -->
 ## Working
