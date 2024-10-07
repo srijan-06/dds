@@ -22,20 +22,24 @@
 ## Abstract
 <details>
   <summary>Know More</summary>
-  <h3>Introduction: </h3>
-<pre>  Water is an essential resource that sustains life and supports our communities. However, with increasing population 
-  density and urbanization, effective management of sewage and water resources has become a pressing challenge. A District 
-  Sewage and Water Board is crucial for overseeing water distribution, ensuring efficient sewage treatment, and maintaining 
-  environmental standards. By centralizing these responsibilities, we can enhance service delivery, promote sustainability, 
-  and protect public health.</pre>
-  <h3>Description: </h3>
-<pre>  This Model of District Sewage and Water Management board can oversee the efficient distribution of clean water and 
-  the treatment of sewage. This will enable better planning and infrastructure development, ensuring that our communities 
-  have reliable access to clean water and effective waste management systems. By streamlining these functions, it can 
-  ensure reliable access to essential services for all residents.</pre>
+  <h3>Motivation: </h3>
+<pre>  Water is vital for life and the well-being of our communities, yet rapid population growth and urbanization pose 
+  significant challenges to its management. The increasing demand for clean water and effective sewage treatment 
+  necessitates a coordinated approach to resource oversight. Establishing a District Sewage and Water Board is essential 
+  for ensuring efficient water distribution, proper sewage management, and adherence to environmental standards. By 
+  centralizing these responsibilities, we can improve service delivery, promote sustainable practices, and safeguard 
+  public health. A proactive approach to managing water resources will not only enhance community resilience but also 
+  foster a healthier environment for current and future generations.</pre>
+  <h3>Problem Statement: </h3>
+<pre>  As urbanization and population density increase, effective management of water resources and sewage systems has 
+  become a critical challenge for communities. Inadequate oversight can lead to inefficient water distribution, inadequate 
+  sewage treatment, and negative environmental impacts, jeopardizing public health and sustainability. The absence of a 
+  centralized authority hampers planning and infrastructure development, resulting in unreliable access to clean water and 
+  waste management services. To address these issues, a District Sewage and Water Board is needed to streamline operations, 
+  enhance service delivery, and ensure that all residents benefit from efficient, sustainable water and sewage management 
+  systems.</pre>
   <h3> Features:</h3><pre>
-  1. Water collection from Rain and Other Sources are collectively stored in the source of the Water Reservoir from 
-     where the City and the Town receive Water.
+  1. Water is collectively stored in Water Reservoir from where the City and the Town receive Water.
   2. Treatment of Sewage Water from the City and Town:
      a. The Sewage from the Town & City Directly goes to the Water Treatment Board
      b. The Treated Water then is sent to the City's Water Reservoir
