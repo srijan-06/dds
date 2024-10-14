@@ -194,8 +194,8 @@ This water management system efficiently regulates water supply, avoiding overfl
         end
     end
 
-    assign city_demand = city_pop * 2;
-    assign town_demand = town_pop * 2;
+    assign city_demand = city_pop;
+    assign town_demand = town_pop;
     assign total_demand = city_demand + town_demand;
 
     always @(posedge clk or posedge reset) begin
