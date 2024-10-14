@@ -161,27 +161,36 @@ This model provides a systematic approach to balance water supply, demand, and t
 ## Logisim Circuit Diagram
 <details>
   <summary>Click to View</summary>
-  The [Logisim](https://github.com/SreeDakshinya/S1-T18-Small-Scale-DES-Algorithm-Hardware-Implementation/tree/main/Logisim) folder consists the Logisim File of the DSWB: District Sewage and Water Board circuit.
+  
+  The [Logisim](https://github.com/cs131-231nitk/DDS_Project-S1-T12/tree/main/Logisim) folder consists the Logisim File of the DSWB: District Sewage and Water Board circuit.
   
     STEPS to use the .circ file (Overall Circuit):
 
     1. Firstly, Set the Population Rate for City & Down using the 4-bit & 3-bit input respectively.
-    2. Toggle the Population Adder Switch to Increase the Given Rate of Population for a day (10-ticks)
-    3. Set the "Water Collection Rate" using the 6-bit input, and use the "Pump Switch" to pump the input water to the water reservoir every half-day (5-ticks)
-    4. You will notice the water decrementing slowly with time due to consumption from the city & town and about 9/16th of it being recycled
-    5. Therefore, you'll have to accordingly adjust the "Water Collection Rate" for the selected population of City & Town so that they don't run out of water.
-    6. If there is Insufficient Water for the Town/City, the water supply for both will be halted so that the Water Reservoir can Analyze the Supply and Adjust the "Water Collection Rate" to meet the District's Need.
-    7. This with enable to effectively understand the necessity of water for the District and Analyse the consumption and avail the right input rates for the right population. 
+    2. Toggle the Population Adder Switch to Increase the Given Rate of Population for a day (10-ticks).
+    3. Set the "Water Collection Rate" using the 6-bit input, and use the "Pump Switch" to pump the input 
+       water to the water reservoir every half-day (5-ticks)
+    4. You will notice the water decrementing slowly with time due to consumption from the city & town and 
+       about 9/16th of it being recycled
+    5. Therefore, you'll have to accordingly adjust the "Water Collection Rate" for the selected population 
+       of City & Town so that they don't run out of water.
+    6. If there is Insufficient Water for the Town/City, the water supply for both will be halted so that 
+       the Water Reservoir can Analyze the Supply and Adjust the "Water Collection Rate" to meet the District's 
+       Need.
+    7. This with enable to effectively understand the necessity of water for the District and Analyse the 
+       consumption and avail the right input rates for the right population. 
     8. To Reset, Revert Every Binary Input to '0's and press the Reset Button to Reset the Circuit.
 
 
     Few Important NOTES:
 
-    a. You can adjust the population by adding/subtracting using the "Population Rate" to choose the rate & the right Switch to execute the process.
-    b. You can also change the "Rate" of the Population Adder/Subtractor and the "Water Collection Rate" at any point of time to match and analyze at different circumstances.
+    a. You can adjust the population by adding/subtracting using the "Population Rate" to choose the rate & the 
+       right Switch to execute the process.
+    b. You can also change the "Rate" of the Population Adder/Subtractor and the "Water Collection Rate" at any 
+       point of time to match and analyze at different circumstances.
     c. [IMP] You can also start with FIlling the Water Reservoir First and then Add the Population.
   ### Main Circuit
-   ![Main-S1-T21]([https://github.com/user-attachments/assets/0d73abec-6806-452b-8408-5f54fd573e5a](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/main.png))
+   ![main](https://github.com/user-attachments/assets/30c8ba42-f7d7-4a4b-9137-bdd8a624d4a8)
   
   ### 
  
