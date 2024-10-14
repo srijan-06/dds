@@ -84,8 +84,176 @@
 ## Verilog Code
 <details>
   <summary>Detail</summary>
+ Main Code:
+    
+    module water_management_system (
+    input wire clk,
+    input wire reset,
+    input wire city_add_pop,
+    input wire city_sub_pop,
+    input wire town_add_pop,
+    input wire town_sub_pop,
+    input wire rain_add,
+    input wire [3:0]city_pop_rate,
+    input wire [2:0]town_pop_rate,
+    input wire [5:0] water_collection_rate, 
+    output wire overflow,
+    output wire underflow,
+    output wire [7:0] city_population,
+    output wire [7:0] town_population,
+    output wire [9:0] reservoir_level 
+    );
 
-  > Neatly update the Verilog code in code style only.
+    reg [7:0] city_pop, town_pop;
+    wire [8:0] city_demand, town_demand, total_demand;
+    reg [9:0] water_reservoir; 
+   
+   
+    parameter MAX_RESERVOIR = 1000;
+    parameter SEWAGE_WATER_RATIO = 2;
+    parameter TREATED_WATER_RETURN = 3;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            city_pop <= 8'd50; 
+        end else if (city_add_pop) begin
+            city_pop <= city_pop + city_pop_rate;
+        end else if (city_sub_pop && city_pop > 0) begin
+            city_pop <= city_pop - city_pop_rate;
+        end
+    end
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            town_pop <= 8'd30; 
+        end else if (town_add_pop) begin
+            town_pop <= town_pop + town_pop_rate;
+        end else if (town_sub_pop && town_pop > 0) begin
+            town_pop <= town_pop - town_pop_rate;
+        end
+    end
+
+    assign city_demand = city_pop * 2;
+    assign town_demand = town_pop * 2;
+    assign total_demand = city_demand + town_demand;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            water_reservoir <= 10'd500; 
+        end else begin
+            if (water_reservoir >= total_demand) begin
+                water_reservoir <= water_reservoir - total_demand+(9*total_demand)/16;
+            end else begin
+                water_reservoir <= water_reservoir; 
+            end
+
+            if (rain_add && water_reservoir < MAX_RESERVOIR) begin
+                water_reservoir <= water_reservoir + 2*water_collection_rate;
+                if (water_reservoir > MAX_RESERVOIR) begin
+                    water_reservoir <= MAX_RESERVOIR; 
+                end
+            end
+        end
+    end
+
+    assign overflow = (water_reservoir >= MAX_RESERVOIR);
+    assign underflow = (water_reservoir <= total_demand);
+    assign city_population = city_pop;
+    assign town_population = town_pop;
+    assign reservoir_level = water_reservoir;
+
+    endmodule
+
+
+Testbench Code:
+        
+    module tb_water_management_system;
+    reg clk;
+    reg reset;
+    reg city_add_pop;
+    reg city_sub_pop;
+    reg town_add_pop;
+    reg town_sub_pop;
+    reg rain_add;
+    reg [5:0] water_collection_rate; 
+    reg[3:0]city_pop_rate;
+    reg[2:0]town_pop_rate;
+
+    wire overflow;
+    wire underflow;
+    wire [7:0] city_population;
+    wire [7:0] town_population;
+    wire [9:0] reservoir_level;
+
+   
+    water_management_system uut (
+        .clk(clk),
+        .reset(reset),
+        .city_add_pop(city_add_pop),
+        .city_sub_pop(city_sub_pop),
+        .town_add_pop(town_add_pop),
+        .town_sub_pop(town_sub_pop),
+        .rain_add(rain_add),
+        .city_pop_rate(city_pop_rate),
+        .town_pop_rate(town_pop_rate),
+        .water_collection_rate(water_collection_rate),
+        .overflow(overflow),
+        .underflow(underflow),
+        .city_population(city_population),
+        .town_population(town_population),
+        .reservoir_level(reservoir_level)
+    );
+
+    always begin
+        #5 clk = ~clk;
+    end
+    
+
+    initial begin
+        clk = 1;
+        reset = 1;
+        city_add_pop = 0;
+        city_sub_pop = 0;
+        town_add_pop = 0;
+        town_sub_pop = 0;
+        rain_add = 0;
+        water_collection_rate = 6'd20; 
+        town_pop_rate=3'd2;
+        city_pop_rate=4'd3;
+        #10 reset = 0;
+
+        #10 city_add_pop = 1; #10 city_add_pop = 0;
+        #10 city_add_pop = 1; #10 city_add_pop = 0;
+         #10 rain_add = 1; #10 rain_add = 0;
+        #10 town_add_pop = 1; #10 town_add_pop = 0; 
+        #10 town_add_pop = 1; #10 town_add_pop = 0; 
+        #10 rain_add = 1; #10 rain_add = 0;
+        #10 rain_add = 1; #10 rain_add = 0;
+        #10 rain_add = 1; #10 rain_add = 0; 
+        #10 rain_add = 1; #10 rain_add = 0; 
+
+        
+
+        #10 city_sub_pop = 1; #10 city_sub_pop = 0; 
+
+        #10 water_collection_rate = 6'd40;
+        #10 rain_add = 1; #10 rain_add = 0; 
+
+        
+        
+
+        
+        #100 $finish;
+    end
+
+    initial begin
+        $monitor("Time:%d, City Pop:%d, Town Pop:%d,Pump:%d ,Water Input:%d ,Reservoir:%d, Overflow:%b, Underflow:%b",
+            $time, city_population, town_population,rain_add,water_collection_rate, reservoir_level, overflow, underflow);
+    end
+
+    endmodule
+
+
 </details>
 
 ## References
