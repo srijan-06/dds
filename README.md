@@ -76,8 +76,9 @@
 ## Logisim Circuit Diagram
 <details>
   <summary>Detail</summary>
-
-  > Update a neat logisim circuit diagram
+    
+   ![Logism S1-T12](https://github.com/user-attachments/assets/7151384d-9656-454f-af32-c954d0749030)
+ 
 </details>
 
 <!-- Fifth Section -->
