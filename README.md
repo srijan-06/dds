@@ -67,9 +67,68 @@
 <!-- Third Section -->
 ## Working
 <details>
-  <summary>Detail</summary>
+  <summary>Detail Working</summary>
 
-  > Explain the working of your model with the help of a functional table (compulsory) followed by the flowchart.
+  
+The Sewage Board & Water Management System efficiently regulates the supply of water based on demand while ensuring that reservoirs do not overflow. It compares the city’s water usage, checks demand rates, and manages reservoir levels accordingly. The system uses several conditions and logic gates to determine whether to continue supplying water or stop to avoid overflow.
+
+### Inputs and Limits
+
+- **city_prev_pulse_rate**: The previous water demand or usage rate from the city.
+- **city_pulse_rate**: The current water usage rate or demand.
+- **city_demand_pulse**: The new demand from the city.
+- **water_reservoir**: The current water level in the reservoir.
+- **MAX_RESERVOIR**: The maximum water level the reservoir can hold.
+
+### Design & Working
+
+1. **Start**:
+   - The process initiates to monitor and compare the city’s water demand and reservoir levels.
+  
+2. **Reset Check**:
+   - The system first checks if there is a reset condition in the operation.
+   - If `reset = True`, it restarts the process; if `reset = False`, it continues monitoring.
+  
+3. **City Pulse Rate Check**:
+   - Comparator compares the current city water demand (`city_pulse_rate`) with the value of 90.
+   - If the current city demand is greater than 90, the process moves forward.
+   - If the city pulse is less than or equal to 90, it moves to check other conditions.
+  
+4. **Previous and Current Pulse Rate Comparison**:
+   - The system compares the `city_prev_pulse_rate` (previous demand) with the current `city_pulse_rate`.
+   - If the previous pulse rate is less than the current pulse rate, the system continues.
+   - If not, it checks further demand conditions.
+  
+5. **City Demand Comparison**:
+   - The system checks if the `city_demand_pulse` is greater than or equal to 100.
+   - If true, the process continues to manage water distribution.
+   - If false, the process moves on without major action.
+  
+6. **Reservoir Level Check**:
+   - The current water level in the reservoir is compared with `MAX_RESERVOIR`.
+   - If the `water_reservoir` is less than the maximum reservoir capacity, the system continues.
+   - If the reservoir is full, the system will avoid further filling to prevent overflow.
+  
+7. **Overflow Management**:
+   - If the water reservoir level is greater than or equal to `MAX_RESERVOIR`, an overflow condition is triggered.
+   - The system stops adding water or controls the flow to avoid spillage.
+  
+8. **Water Release Control**:
+   - If demand is met and the reservoir has space, the water supply is managed and controlled based on the city’s demand.
+   - `Water Reservoir < MAX_RESERVOIR`: This condition allows the system to supply water to match the demand.
+  
+9. **End**:
+   - The process concludes either by supplying the required water, stopping overflow, or pausing due to normal conditions.
+
+### System Functionality
+
+- The system continuously monitors the water demand and reservoir levels.
+- It ensures efficient water distribution by checking current demand and previous usage rates.
+- Overflow protection mechanisms prevent reservoir overflows by halting water supply when the reservoir reaches its maximum capacity.
+- It adapts to changes in water demand and ensures that the system reacts appropriately to changes in demand or reservoir levels.
+
+This water management system efficiently regulates water supply, avoiding overflow and ensuring demand is met based on real-time usage data.
+
 </details>
 
 <!-- Fourth Section -->
