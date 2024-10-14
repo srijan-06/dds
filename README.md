@@ -75,17 +75,18 @@
 <!-- Fourth Section -->
 ## Logisim Circuit Diagram
 <details>
-  <summary>Detail</summary>
+  <summary>Click to View</summary>
     
-   ![Logism S1-T12](https://github.com/user-attachments/assets/7151384d-9656-454f-af32-c954d0749030)
+   ![S1-T12_Logisim](https://github.com/user-attachments/assets/5247f974-7aef-4b91-9ec8-65789a99e9e6)
  
 </details>
 
 <!-- Fifth Section -->
 ## Verilog Code
 <details>
-  <summary>Detail</summary>
- Main Code:
+  <summary>Click to View</summary>
+  
+ ### Main Code:
     
     module water_management_system (
     input wire clk,
@@ -166,7 +167,7 @@
     endmodule
 
 
-Testbench Code:
+### Testbench File's Code:
         
     module tb_water_management_system;
     reg clk;
