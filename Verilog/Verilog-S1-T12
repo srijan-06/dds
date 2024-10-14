@@ -1,0 +1,297 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01239388 .scope module, "tb_water_management_system" "tb_water_management_system" 2 1;
+ .timescale 0 0;
+v01140C80_0 .var "city_add_pop", 0 0;
+v01140D30_0 .var "city_pop_rate", 3 0;
+v011407B0_0 .net "city_population", 7 0, L_01176D68; 1 drivers
+v011406A8_0 .var "city_sub_pop", 0 0;
+v01140650_0 .var "clk", 0 0;
+v011409C0_0 .net "overflow", 0 0, L_01140548; 1 drivers
+v011408B8_0 .var "rain_add", 0 0;
+v01140D88_0 .net "reservoir_level", 9 0, L_01176C88; 1 drivers
+v01140A18_0 .var "reset", 0 0;
+v01140DE0_0 .var "town_add_pop", 0 0;
+v01140A70_0 .var "town_pop_rate", 2 0;
+v01140CD8_0 .net "town_population", 7 0, L_01176D30; 1 drivers
+v011404F0_0 .var "town_sub_pop", 0 0;
+v01140E90_0 .net "underflow", 0 0, L_01140910; 1 drivers
+v01140EE8_0 .var "water_collection_rate", 5 0;
+S_01239C90 .scope module, "uut" "water_management_system" 2 22, 3 1, S_01239388;
+ .timescale 0 0;
+P_01145724 .param/l "MAX_RESERVOIR" 3 25, +C4<01111101000>;
+P_01145738 .param/l "SEWAGE_WATER_RATIO" 3 26, +C4<010>;
+P_0114574C .param/l "TREATED_WATER_RETURN" 3 27, +C4<011>;
+L_01176D68 .functor BUFZ 8, v011400A8_0, C4<00000000>, C4<00000000>, C4<00000000>;
+L_01176D30 .functor BUFZ 8, v01140208_0, C4<00000000>, C4<00000000>, C4<00000000>;
+L_01176C88 .functor BUFZ 10, v011405F8_0, C4<0000000000>, C4<0000000000>, C4<0000000000>;
+v01134090_0 .net *"_s0", 17 0, C4<000000000000000010>; 1 drivers
+v01137700_0 .net *"_s14", 11 0, L_01140968; 1 drivers
+v01138798_0 .net *"_s17", 1 0, C4<00>; 1 drivers
+v01235060_0 .net *"_s18", 11 0, C4<001111101000>; 1 drivers
+v0113FD90_0 .net *"_s22", 9 0, L_01140758; 1 drivers
+v01140260_0 .net *"_s25", 0 0, C4<0>; 1 drivers
+v01140418_0 .net *"_s3", 17 0, L_01140E38; 1 drivers
+v0113FFF8_0 .net *"_s6", 17 0, C4<000000000000000010>; 1 drivers
+v011401B0_0 .net *"_s9", 17 0, L_01140F40; 1 drivers
+v0113FDE8_0 .net "city_add_pop", 0 0, v01140C80_0; 1 drivers
+v0113FEF0_0 .net "city_demand", 8 0, L_01140700; 1 drivers
+v011400A8_0 .var "city_pop", 7 0;
+v01140368_0 .net "city_pop_rate", 3 0, v01140D30_0; 1 drivers
+v0113FE40_0 .alias "city_population", 7 0, v011407B0_0;
+v0113FE98_0 .net "city_sub_pop", 0 0, v011406A8_0; 1 drivers
+v011402B8_0 .net "clk", 0 0, v01140650_0; 1 drivers
+v0113FF48_0 .alias "overflow", 0 0, v011409C0_0;
+v011403C0_0 .net "rain_add", 0 0, v011408B8_0; 1 drivers
+v0113FFA0_0 .alias "reservoir_level", 9 0, v01140D88_0;
+v01140100_0 .net "reset", 0 0, v01140A18_0; 1 drivers
+v01140050_0 .net "total_demand", 8 0, L_01140F98; 1 drivers
+v0113FCE0_0 .net "town_add_pop", 0 0, v01140DE0_0; 1 drivers
+v01140158_0 .net "town_demand", 8 0, L_01140BD0; 1 drivers
+v01140208_0 .var "town_pop", 7 0;
+v0113FD38_0 .net "town_pop_rate", 2 0, v01140A70_0; 1 drivers
+v01140310_0 .alias "town_population", 7 0, v01140CD8_0;
+v01140860_0 .net "town_sub_pop", 0 0, v011404F0_0; 1 drivers
+v011405A0_0 .alias "underflow", 0 0, v01140E90_0;
+v01140B78_0 .net "water_collection_rate", 5 0, v01140EE8_0; 1 drivers
+v011405F8_0 .var "water_reservoir", 9 0;
+E_01136840 .event posedge, v01140100_0, v011402B8_0;
+L_01140E38 .arith/mult 18, v011400A8_0, C4<000000000000000010>;
+L_01140700 .part L_01140E38, 0, 9;
+L_01140F40 .arith/mult 18, v01140208_0, C4<000000000000000010>;
+L_01140BD0 .part L_01140F40, 0, 9;
+L_01140F98 .arith/sum 9, L_01140700, L_01140BD0;
+L_01140968 .concat [ 10 2 0 0], v011405F8_0, C4<00>;
+L_01140548 .cmp/ge 12, L_01140968, C4<001111101000>;
+L_01140758 .concat [ 9 1 0 0], L_01140F98, C4<0>;
+L_01140910 .cmp/ge 10, L_01140758, v011405F8_0;
+    .scope S_01239C90;
+T_0 ;
+    %wait E_01136840;
+    %load/v 8, v01140100_0, 1;
+    %jmp/0xz  T_0.0, 8;
+    %movi 8, 50, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v011400A8_0, 0, 8;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/v 8, v0113FDE8_0, 1;
+    %jmp/0xz  T_0.2, 8;
+    %load/v 8, v011400A8_0, 8;
+    %load/v 16, v01140368_0, 4;
+    %mov 20, 0, 4;
+    %add 8, 16, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v011400A8_0, 0, 8;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/v 8, v0113FE98_0, 1;
+    %load/v 9, v011400A8_0, 8;
+    %mov 17, 0, 1;
+    %cmp/u 0, 9, 9;
+    %mov 9, 5, 1;
+    %and 8, 9, 1;
+    %jmp/0xz  T_0.4, 8;
+    %load/v 8, v011400A8_0, 8;
+    %load/v 16, v01140368_0, 4;
+    %mov 20, 0, 4;
+    %sub 8, 16, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v011400A8_0, 0, 8;
+T_0.4 ;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_01239C90;
+T_1 ;
+    %wait E_01136840;
+    %load/v 8, v01140100_0, 1;
+    %jmp/0xz  T_1.0, 8;
+    %movi 8, 30, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v01140208_0, 0, 8;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/v 8, v0113FCE0_0, 1;
+    %jmp/0xz  T_1.2, 8;
+    %load/v 8, v01140208_0, 8;
+    %load/v 16, v0113FD38_0, 3;
+    %mov 19, 0, 5;
+    %add 8, 16, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v01140208_0, 0, 8;
+    %jmp T_1.3;
+T_1.2 ;
+    %load/v 8, v01140860_0, 1;
+    %load/v 9, v01140208_0, 8;
+    %mov 17, 0, 1;
+    %cmp/u 0, 9, 9;
+    %mov 9, 5, 1;
+    %and 8, 9, 1;
+    %jmp/0xz  T_1.4, 8;
+    %load/v 8, v01140208_0, 8;
+    %load/v 16, v0113FD38_0, 3;
+    %mov 19, 0, 5;
+    %sub 8, 16, 8;
+    %ix/load 0, 8, 0;
+    %assign/v0 v01140208_0, 0, 8;
+T_1.4 ;
+T_1.3 ;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_01239C90;
+T_2 ;
+    %wait E_01136840;
+    %load/v 8, v01140100_0, 1;
+    %jmp/0xz  T_2.0, 8;
+    %movi 8, 500, 10;
+    %ix/load 0, 10, 0;
+    %assign/v0 v011405F8_0, 0, 8;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/v 8, v01140050_0, 9;
+    %mov 17, 0, 1;
+    %load/v 18, v011405F8_0, 10;
+    %cmp/u 8, 18, 10;
+    %or 5, 4, 1;
+    %jmp/0xz  T_2.2, 5;
+    %load/v 8, v011405F8_0, 10;
+    %mov 18, 0, 11;
+    %load/v 29, v01140050_0, 9;
+    %mov 38, 0, 12;
+    %sub 8, 29, 21;
+    %load/v 29, v01140050_0, 9;
+    %movi 38, 0, 12;
+    %muli 29, 9, 21;
+    %movi 50, 16, 21;
+    %div 29, 50, 21;
+    %add 8, 29, 21;
+    %ix/load 0, 10, 0;
+    %assign/v0 v011405F8_0, 0, 8;
+    %jmp T_2.3;
+T_2.2 ;
+    %load/v 8, v011405F8_0, 10;
+    %ix/load 0, 10, 0;
+    %assign/v0 v011405F8_0, 0, 8;
+T_2.3 ;
+    %load/v 8, v011403C0_0, 1;
+    %load/v 9, v011405F8_0, 10;
+    %mov 19, 0, 2;
+   %cmpi/u 9, 1000, 12;
+    %mov 9, 5, 1;
+    %and 8, 9, 1;
+    %jmp/0xz  T_2.4, 8;
+    %load/v 8, v011405F8_0, 10;
+    %mov 18, 0, 11;
+    %load/v 29, v01140B78_0, 6;
+    %movi 35, 0, 15;
+    %muli 29, 2, 21;
+    %add 8, 29, 21;
+    %ix/load 0, 10, 0;
+    %assign/v0 v011405F8_0, 0, 8;
+    %movi 8, 1000, 12;
+    %load/v 20, v011405F8_0, 10;
+    %mov 30, 0, 2;
+    %cmp/u 8, 20, 12;
+    %jmp/0xz  T_2.6, 5;
+    %movi 8, 1000, 11;
+    %ix/load 0, 10, 0;
+    %assign/v0 v011405F8_0, 0, 8;
+T_2.6 ;
+T_2.4 ;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_01239388;
+T_3 ;
+    %delay 5, 0;
+    %load/v 8, v01140650_0, 1;
+    %inv 8, 1;
+    %set/v v01140650_0, 8, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_01239388;
+T_4 ;
+    %set/v v01140650_0, 1, 1;
+    %set/v v01140A18_0, 1, 1;
+    %set/v v01140C80_0, 0, 1;
+    %set/v v011406A8_0, 0, 1;
+    %set/v v01140DE0_0, 0, 1;
+    %set/v v011404F0_0, 0, 1;
+    %set/v v011408B8_0, 0, 1;
+    %movi 8, 20, 6;
+    %set/v v01140EE8_0, 8, 6;
+    %movi 8, 2, 3;
+    %set/v v01140A70_0, 8, 3;
+    %movi 8, 3, 4;
+    %set/v v01140D30_0, 8, 4;
+    %delay 10, 0;
+    %set/v v01140A18_0, 0, 1;
+    %delay 10, 0;
+    %set/v v01140C80_0, 1, 1;
+    %delay 10, 0;
+    %set/v v01140C80_0, 0, 1;
+    %delay 10, 0;
+    %set/v v01140C80_0, 1, 1;
+    %delay 10, 0;
+    %set/v v01140C80_0, 0, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 1, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 0, 1;
+    %delay 10, 0;
+    %set/v v01140DE0_0, 1, 1;
+    %delay 10, 0;
+    %set/v v01140DE0_0, 0, 1;
+    %delay 10, 0;
+    %set/v v01140DE0_0, 1, 1;
+    %delay 10, 0;
+    %set/v v01140DE0_0, 0, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 1, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 0, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 1, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 0, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 1, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 0, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 1, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 0, 1;
+    %delay 10, 0;
+    %set/v v011406A8_0, 1, 1;
+    %delay 10, 0;
+    %set/v v011406A8_0, 0, 1;
+    %delay 10, 0;
+    %movi 8, 40, 6;
+    %set/v v01140EE8_0, 8, 6;
+    %delay 10, 0;
+    %set/v v011408B8_0, 1, 1;
+    %delay 10, 0;
+    %set/v v011408B8_0, 0, 1;
+    %delay 100, 0;
+    %vpi_call 2 79 "$finish";
+    %end;
+    .thread T_4;
+    .scope S_01239388;
+T_5 ;
+    %vpi_call 2 83 "$monitor", "Time:%d, City Pop:%d, Town Pop:%d,Pump:%d ,Water Input:%d ,Reservoir:%d, Overflow:%b, Underflow:%b", $time, v011407B0_0, v01140CD8_0, v011408B8_0, v01140EE8_0, v01140D88_0, v011409C0_0, v01140E90_0;
+    %end;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "Verilog-S1-T12_tb.v";
+    "Verilog-S1-T12.v";
