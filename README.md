@@ -69,65 +69,91 @@
 <details>
   <summary>Detail Working</summary>
 
-  
-The Sewage Board & Water Management System efficiently regulates the supply of water based on demand while ensuring that reservoirs do not overflow. It compares the city’s water usage, checks demand rates, and manages reservoir levels accordingly. The system uses several conditions and logic gates to determine whether to continue supplying water or stop to avoid overflow.
+### Overview
 
-### Inputs and Limits
+In this water management system for the city and town, we are modeling the flow of water from a shared reservoir to two regions, while controlling the population, water intake, and sewage treatment. The process involves various components, control mechanisms, and logical steps for ensuring efficient water use and waste management.
 
-- **city_prev_pulse_rate**: The previous water demand or usage rate from the city.
-- **city_pulse_rate**: The current water usage rate or demand.
-- **city_demand_pulse**: The new demand from the city.
-- **water_reservoir**: The current water level in the reservoir.
-- **MAX_RESERVOIR**: The maximum water level the reservoir can hold.
+### Key Components in the System
 
-### Design & Working
+1. **Population Controls**:
+   - Adjustments to the city and town population using the provided interface (Adders and Subtractors).
+   - These controls allow for the modification of consumption rates and waste production.
+
+2. **Water Reservoir**:
+   - A central reservoir that stores water and supplies both the city and town.
+   - Inputs include external sources such as rainwater, surface streams.
+   - Outputs include water consumption by the city and town, which reduces the reservoir level.
+
+3. **Sewage Collection and Treatment**:
+   - Wastewater from both the city and town is treated. The process is only partially efficient, as some water is lost during treatment.
+   - Treated water is returned to the reservoir.
+
+4. **Control Buttons**:
+   - Mechanisms for adding or subtracting water in the reservoir or altering population in the regions.
+
+### Design and Flowchart Analysis
+
+The project is broken down into the following steps:
 
 1. **Start**:
-   - The process initiates to monitor and compare the city’s water demand and reservoir levels.
-  
-2. **Reset Check**:
-   - The system first checks if there is a reset condition in the operation.
-   - If `reset = True`, it restarts the process; if `reset = False`, it continues monitoring.
-  
-3. **City Pulse Rate Check**:
-   - Comparator compares the current city water demand (`city_pulse_rate`) with the value of 90.
-   - If the current city demand is greater than 90, the process moves forward.
-   - If the city pulse is less than or equal to 90, it moves to check other conditions.
-  
-4. **Previous and Current Pulse Rate Comparison**:
-   - The system compares the `city_prev_pulse_rate` (previous demand) with the current `city_pulse_rate`.
-   - If the previous pulse rate is less than the current pulse rate, the system continues.
-   - If not, it checks further demand conditions.
-  
-5. **City Demand Comparison**:
-   - The system checks if the `city_demand_pulse` is greater than or equal to 100.
-   - If true, the process continues to manage water distribution.
-   - If false, the process moves on without major action.
-  
-6. **Reservoir Level Check**:
-   - The current water level in the reservoir is compared with `MAX_RESERVOIR`.
-   - If the `water_reservoir` is less than the maximum reservoir capacity, the system continues.
-   - If the reservoir is full, the system will avoid further filling to prevent overflow.
-  
-7. **Overflow Management**:
-   - If the water reservoir level is greater than or equal to `MAX_RESERVOIR`, an overflow condition is triggered.
-   - The system stops adding water or controls the flow to avoid spillage.
-  
-8. **Water Release Control**:
-   - If demand is met and the reservoir has space, the water supply is managed and controlled based on the city’s demand.
-   - `Water Reservoir < MAX_RESERVOIR`: This condition allows the system to supply water to match the demand.
-  
-9. **End**:
-   - The process concludes either by supplying the required water, stopping overflow, or pausing due to normal conditions.
+   - The process initiates with predefined water levels in the reservoir and initial population in both the city and town.
 
-### System Functionality
+2. **City Population Adjustment**:
+   - A population adjustment function for the city is initiated using controls such as `city_pop_add` and `city_pop_sub`. Based on this, the city’s population is updated.
 
-- The system continuously monitors the water demand and reservoir levels.
-- It ensures efficient water distribution by checking current demand and previous usage rates.
-- Overflow protection mechanisms prevent reservoir overflows by halting water supply when the reservoir reaches its maximum capacity.
-- It adapts to changes in water demand and ensures that the system reacts appropriately to changes in demand or reservoir levels.
+3. **Town Population Adjustment**:
+   - Similarly, the town’s population can be increased or decreased with controls `town_pop_add` and `town_pop_sub`.
 
-This water management system efficiently regulates water supply, avoiding overflow and ensuring demand is met based on real-time usage data.
+4. **Water Demand Calculation**:
+   - The water demand for both the city and town is calculated. Each region’s demand is based on its population and consumption rate. The formula for demand is:
+
+     ```
+     Water_Demand = Population Size
+     ```
+
+   - City Demand: Derived using `city_demand = city_pop`
+   - Town Demand: Derived using `town_demand = town_pop`.
+
+5. **Sewage Flow**:
+   - Sewage is produced based on the water intake (a percentage of water used becomes sewage). For the city, this is `city_sewage = 3/4 * city_demand`, and for the town, it is `town_sewage = 3/4 * town_demand`.
+
+6. **Water Supply Check**:
+   - A check is performed to determine if the total demand (`city_demand + town_demand`) is greater than the available water in the reservoir. If the demand exceeds the reservoir capacity, adjustments will be made.
+   - If there is sufficient water in the reservoir, water is supplied to both regions.
+
+7. **Reservoir Overflow Management**:
+   - After supplying water, if the reservoir exceeds the maximum capacity (due to external inputs like rain), overflow is managed by releasing excess water to prevent flooding.
+
+8. **Update Water Reservoir**:
+   - The water levels in the reservoir are updated after accounting for consumption, sewage treatment, and water addition from external sources (like rainfall). The reservoir level is recalculated:
+
+     ```
+     New Water Level = Old Water Level - Total Demand + Returned Sewage + External Sources
+     ```
+
+9. **Sewage Treatment**:
+   - Sewage produced is treated, and a portion (about three-quarters of the input) is returned to the reservoir, while the rest is lost.
+
+10. **End**:
+   - The process can be reset or adjusted based on changes in population or external inputs like rainfall.
+
+
+### Summary of the Process
+
+This water management system ensures efficient use of water resources by dynamically adjusting for population changes, consumption rates, and sewage recycling. It helps in preventing water shortages, managing waste, and ensuring a continuous supply for both the city and town.
+
+This project can be implemented using a combination of logic gates, sensors, and controllers to manage water flow, population dynamics, and waste treatment. The diagram and flowchart guide decision-making processes for when to adjust water reserves or manage overflow.
+
+### Real-time Adjustments
+
+The controls allow real-time adjustments to:
+
+- Population changes (Add/Subtract population).
+- Water additions (simulate rainfall).
+- Sewage management (treatment and return to the reservoir).
+
+This model provides a systematic approach to balance water supply, demand, and treatment for a sustainable urban management system.
+
 
 </details>
 
@@ -136,14 +162,14 @@ This water management system efficiently regulates water supply, avoiding overfl
 <details>
   <summary>Click to View</summary>
     
-   ![S1-T12_Logisim](https://github.com/user-attachments/assets/5247f974-7aef-4b91-9ec8-65789a99e9e6)
+   ![S1-T12_Logisim](https://github.com/user-attachments/assets/0d73abec-6806-452b-8408-5f54fd573e5a)
  
 </details>
 
 <!-- Fifth Section -->
 ## Verilog Code
 <details>
-  <summary>Click to View</summary>
+  <summary>View More</summary>
   
  ### Main Code:
     
@@ -194,8 +220,8 @@ This water management system efficiently regulates water supply, avoiding overfl
         end
     end
 
-    assign city_demand = city_pop;
-    assign town_demand = town_pop;
+    assign city_demand = city_pop * 2;
+    assign town_demand = town_pop * 2;
     assign total_demand = city_demand + town_demand;
 
     always @(posedge clk or posedge reset) begin
