@@ -189,10 +189,56 @@ This model provides a systematic approach to balance water supply, demand, and t
     b. You can also change the "Rate" of the Population Adder/Subtractor and the "Water Collection Rate" at any 
        point of time to match and analyze at different circumstances.
     c. [IMP] You can also start with FIlling the Water Reservoir First and then Add the Population.
-  ### Main Circuit
+    ### Main Circuit
    ![main](https://github.com/user-attachments/assets/30c8ba42-f7d7-4a4b-9137-bdd8a624d4a8)
   
-  ### 
+  ### 3-Bit Adder
+   ![3-bit-adder](https://raw.githubusercontent.com/cs131-231nitk/DDS_Project-S1-T12/refs/heads/main/Snapshots/3-bit%20Adder.png?token=GHSAT0AAAAAACY47NBSPRG6V3KL3HNR6YLSZYP64PQ)
+
+  ### 3-bit D-Flipflop 
+   ![3-bit-D-ff](https://raw.githubusercontent.com/cs131-231nitk/DDS_Project-S1-T12/refs/heads/main/Snapshots/3-bit%20FlipFlop%20%20D.png?token=GHSAT0AAAAAACY47NBTN72FQGQXYO7FVIM6ZYP66HA)
+
+  ### 3-bit Subtractor
+   ![3-bit-sub](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/3-bit%20Subtractor.png?raw=true)
+
+  ### 4-bit Adder
+   ![4-bit-adder](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/4-bit%20Adder.png?raw=true)
+
+  ### 4-bit D-Flipflop
+   ![4-bit-D-ff](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/4-bit%20FlipFlop%20D.png?raw=true)
+
+  ### 4-Bit Multiplier (by 3)
+   ![4-bit-3-Mul](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/4-bit%20Multiplier%20(by%203).png?raw=true)
+
+  ### 4-bit Subtractor
+   ![4-bit-sub](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/4-bit%20Subtractor.png?raw=true)
+
+  ### 5-bit Divider (by 4)
+   ![5-bit-4-div](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/4-bit%20Subtractor.png?raw=true)
+
+  ### 5-bit D-Flipflop 
+   ![5-bit-D-ff](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/5-bit%20Flipflop.png?raw=true)
+
+  ### 6-bit D-Flipflop 
+   ![6-bit-D-ff](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/6-Bit%20FlipFlop%20D.png?raw=true)
+
+  ### 6-bit Divider (by 4)
+   ![6-bit-4-div](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/6-bit%20Divider%20(by%204).png?raw=true)
+
+  ### 6-bit Adder
+   ![6-bit-adder](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/6-bit-Adder.png?raw=true)
+
+  ### 6-bit Subtractor
+   ![6-bit-sub](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/6-bit-subtractor.png?raw=true)
+
+  ### Display - 3-bit
+   ![display-3-bit](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/Display%20-%203-bit.png?raw=true)
+
+  ### Display - 4-bit
+   ![display-4-bit](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/Display%20-%204-bit.png?raw=true)
+
+  ### Display - 6-bit
+   ![display-4-bit](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/Display%20-%206-bit.png?raw=true)
  
 </details>
 
