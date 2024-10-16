@@ -193,10 +193,10 @@ This model provides a systematic approach to balance water supply, demand, and t
    ![main](https://github.com/user-attachments/assets/30c8ba42-f7d7-4a4b-9137-bdd8a624d4a8)
   
   ### 3-Bit Adder
-   ![3-bit-adder](https://raw.githubusercontent.com/cs131-231nitk/DDS_Project-S1-T12/refs/heads/main/Snapshots/3-bit%20Adder.png?token=GHSAT0AAAAAACY47NBSPRG6V3KL3HNR6YLSZYP64PQ)
+   ![3-bit-adder](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/3-bit%20Adder.png?raw=true)
 
   ### 3-bit D-Flipflop 
-   ![3-bit-D-ff](https://raw.githubusercontent.com/cs131-231nitk/DDS_Project-S1-T12/refs/heads/main/Snapshots/3-bit%20FlipFlop%20%20D.png?token=GHSAT0AAAAAACY47NBTN72FQGQXYO7FVIM6ZYP66HA)
+   ![3-bit-D-ff](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/3-bit%20FlipFlop%20%20D.png?raw=true)
 
   ### 3-bit Subtractor
    ![3-bit-sub](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/3-bit%20Subtractor.png?raw=true)
