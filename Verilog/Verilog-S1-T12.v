@@ -1,3 +1,11 @@
+//S1-T21:DDS Project
+//DSWB:District Sewage and Water Board
+//Members:
+/*
+1.Jeferson Pravalto , 231CS131 , jeferson.231cs131@nitk.edu.in
+2.Maley Srijan , 231CS133 , srijan.231cs133@nitk.edu.in
+3.Vamshi Chethan A M , 231CS162 , vamshichethanam.231cs162@nitk.edu.in
+*/
 module water_management_system (
     input wire clk,
     input wire reset,
