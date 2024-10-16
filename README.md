@@ -199,10 +199,30 @@ This model provides a systematic approach to balance water supply, demand, and t
 <!-- Fifth Section -->
 ## Verilog Code
 <details>
-  <summary>View More</summary>
+<summary>View More</summary>
+To use the Verilog files:-
+
+Step-1:  
+&nbsp;&nbsp;&nbsp;&nbsp;Open main Verilog code.
+
+Step-2:  
+&nbsp;&nbsp;&nbsp;&nbsp;Enter city Population & Town population.
+
+Step-3:  
+&nbsp;&nbsp;&nbsp;&nbsp;Open testbench verilog code and Enter water input rate.
+
   
+
+
  ### Main Code:
-    
+    //S1-T21:DDS Project
+    //DSWB:District Sewage and Water Board
+    //Members:
+    /*
+    1.Jeferson Pravalto , 231CS131 , jeferson.231cs131@nitk.edu.in
+    2.Maley Srijan , 231CS133 , srijan.231cs133@nitk.edu.in
+    3.Vamshi Chethan A M , 231CS162 , vamshichethanam.231cs162@nitk.edu.in
+    */
     module water_management_system (
       input wire clk,
       input wire reset,
@@ -233,7 +253,7 @@ This model provides a systematic approach to balance water supply, demand, and t
   
       always @(posedge clk or posedge reset) begin
           if (reset) begin
-              city_pop <= 8'd50; 
+              city_pop <= 8'd50; //city_pop                       
           end else if (city_add_pop) begin
               city_pop <= city_pop + city_pop_rate;
           end else if (city_sub_pop && city_pop > 0) begin
@@ -243,7 +263,7 @@ This model provides a systematic approach to balance water supply, demand, and t
   
       always @(posedge clk or posedge reset) begin
           if (reset) begin
-              town_pop <= 8'd30; 
+              town_pop <= 8'd30; //town_pop
           end else if (town_add_pop) begin
               town_pop <= town_pop + town_pop_rate;
           end else if (town_sub_pop && town_pop > 0) begin
@@ -338,7 +358,7 @@ This model provides a systematic approach to balance water supply, demand, and t
           town_add_pop = 0;
           town_sub_pop = 0;
           rain_add = 0;
-          water_collection_rate = 6'd20; 
+          water_collection_rate = 6'd20; //water_collection_rate
           town_pop_rate=3'd2;
           city_pop_rate=4'd3;
           #10 reset = 0;
@@ -357,7 +377,7 @@ This model provides a systematic approach to balance water supply, demand, and t
   
           #10 city_sub_pop = 1; #10 city_sub_pop = 0; 
   
-          #10 water_collection_rate = 6'd40;
+          #10 water_collection_rate = 6'd20;
           #10 rain_add = 1; #10 rain_add = 0; 
   
           
