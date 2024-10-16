@@ -392,7 +392,8 @@ Step-3:
               $time, city_population, town_population,rain_add,water_collection_rate, reservoir_level, overflow, underflow);
       end
     endmodule
-
+### OUTPUT:
+![Screenshot 2024-10-17 010252](https://github.com/user-attachments/assets/d3e06139-5bd7-46c8-bfab-8cbf080e6045)
 
 
 </details>
