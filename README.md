@@ -138,6 +138,22 @@ The project is broken down into the following steps:
    - The process can be reset or adjusted based on changes in population or external inputs like rainfall.
 
 
+### State-Diagrams
+
+#### State Diagram of The Water Reservoir -
+ ![6-bit-reservoir](https://github.com/user-attachments/assets/8e7f394e-c529-433b-a390-0557466765b0)
+
+#### State Diagram of The City's Population -
+ ![4-bit-city](https://github.com/user-attachments/assets/0ede6cce-d92f-4e4a-9a65-23f4a3dc8ef7)
+
+#### State Diagram of The Town's Population -
+ ![3-bit-town](https://github.com/user-attachments/assets/5ee82e74-a099-4554-ad1a-bd057ae0a07a)
+
+
+### Truth-Table
+  ![truth-table](https://github.com/user-attachments/assets/d3e06139-5bd7-46c8-bfab-8cbf080e6045)
+
+
 ### Summary of the Process
 
 This water management system ensures efficient use of water resources by dynamically adjusting for population changes, consumption rates, and sewage recycling. It helps in preventing water shortages, managing waste, and ensuring a continuous supply for both the city and town.
@@ -245,27 +261,22 @@ This model provides a systematic approach to balance water supply, demand, and t
 <!-- Fifth Section -->
 ## Verilog Code
 <details>
-<summary> details</summary>
+<summary>View More</summary>
 
-<details>
-<summary>Instructions</summary>
+### Introduction
+This section is dedicated towards the Verilog implementation of the District Sewage & Water Board model, giving an overview of the rough implementation of the project. All the [Verilog](https://github.com/cs131-231nitk/DDS_Project-S1-T12/tree/main/Verilog) files can be accessed from the Verilog Folder. 
+
+### <u>Instructions</u>
   To use the Verilog files:-
-
-Step-1:  
-&nbsp;&nbsp;&nbsp;&nbsp;Open main Verilog code.
-
-Step-2:  
-&nbsp;&nbsp;&nbsp;&nbsp;Enter city Population & Town population.
-
-Step-3:  
-&nbsp;&nbsp;&nbsp;&nbsp;Open testbench verilog code and Enter water input rate.
-</details>
   
+    Step-1: Open The Main Verilog File
+    Step-2: Enter the City Population & Town Population
+    Step-3: Open the Testbench Verilog File and Enter the Water Input Rate  
 
-<details>
-<summary> Main code</summary>
+### <u>Behavioral-Model Implementation - Verilog:</u>
+<details> 
+  <summary>View Code</summary>
   
- ### Main Code:
     //S1-T12:DDS Project
     //DSWB:District Sewage and Water Board
     //Members:
@@ -354,11 +365,15 @@ Step-3:
     endmodule
 </details>
 
+
+### <u>Gate-Model Implementation - Verilog:</u>
 <details>
-<summary> Main code Gate_Level</summary>
+ <summary>View Code</summary>
+
+ 
 
     //S1-T12:DDS Project
-     //DSWB:District Sewage and Water Board
+    //DSWB:District Sewage and Water Board
     //Members:
     /*
     1.Jeferson Pravalto , 231CS131 , jeferson.231cs131@nitk.edu.in
@@ -553,11 +568,12 @@ Step-3:
     endmodule
  
  </details>
-  <details>
-<summary>Testbench code</summary>
 
-
-### Testbench File's Code:
+ 
+ ### <u>Testbench File's Code:</u>
+ <details>
+  <summary>View Code</summary>
+    
         
     module tb_water_management_system;
       reg clk;
@@ -644,13 +660,15 @@ Step-3:
       end
     endmodule
   </details>
- <details>
-<summary>Output</summary> 
 
-![Screenshot 2024-10-17 010252](https://github.com/user-attachments/assets/d3e06139-5bd7-46c8-bfab-8cbf080e6045)
+  ### <u>Verilog Output</u>
+  <details>
+  <summary>Output</summary> 
+
+   ![verilog-output](https://github.com/cs131-231nitk/DDS_Project-S1-T12/blob/main/Snapshots/Verilog-S1-T12.png)
+  
   </details>
 
-</details>
 </details>
 
 ## References
