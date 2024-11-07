@@ -671,6 +671,24 @@ This section is dedicated towards the Verilog implementation of the District Sew
 
 </details>
 
+## Hardware Implementation
+<details>
+  <summary>Read More</summary>
+  
+  In the hardware implementation of the water management system, we simplified the circuit design to make it more practical for real-world usage while maintaining the core functionality. The description for the same is as follows:
+  1. Instead of using a 4-bit input for the city's population, we reduced it to a 2-bit input to streamline the population control, which still allows for sufficient variations in population size to simulate the dynamics of demand and supply. This simplification also reduced the complexity of the logic and made the design more efficient.
+  2. In the revised system, there is no external pump. Instead, a button is used to simulate the filling of the water reservoir by the preset feature. This button, when pressed, adds water to the system through a 3-bit input, allowing us to control the water supply more easily. The water level in the reservoir is adjusted dynamically, with each clock pulse incrementally modifying the water level over time.
+  3. To handle the water management changes, an adder circuit is utilized. Using the concept of 2's complement, the water level is adjusted by subtracting based on the population from the user input rather than the dynamic generation of population count, which enables a simpler implementation of the hardware, ensuring that water consumption is accurately modeled keeping intact of the sewage treatment and the corresponding utility. This operation enables the system to dynamically update the population and adjust the water supply accordingly.
+  4. One of the critical features of the hardware implementation is the monitoring of water underflow. The system continuously checks if the available water in the city is sufficient to meet demand. If an underflow occurs, meaning the water level drops below the required threshold, the system will notify the user and adjust the water distribution accordingly. Additionally, the water level is displayed at each clock pulse, offering a real-time view of the reservoir's status as water is consumed, which helps maintain a balance between supply and demand.
+  Overall, the hardware implementation allows for a functional and interactive demonstration of the water management system, simulating realistic scenarios in water distribution and consumption while ensuring the efficient operation of the system through simplified, yet effective, hardware components.
+
+Here is a pictorial view of our simplified circuit generated using Logisim:
+![S1-T12_Simplified](https://github.com/user-attachments/assets/b6b60c40-a5c2-4dbb-8e8a-3c599845f3bd)
+
+
+</details>
+
+
 ## References
 <details>
   <summary>For Furthur References</summary>
