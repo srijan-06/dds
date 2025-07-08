@@ -56,10 +56,10 @@
   <summary>See More</summary>
   
   ### Schematic Block Diagram of Functionality
-  ![Schematic Diagram S1-T12](https://github.com/user-attachments/assets/8bc26c6c-8e98-4281-911a-829015f4e7b9)
+  ![Schematic Diagram S1-T12](https://github.com/srijan-06/dds/blob/main/Snapshots/schematic.png)
 
   ### Circuital Diagram
-  ![Circuital Diagram S1-T12](https://github.com/user-attachments/assets/5bf039be-73b7-43d9-a54a-f85d61c3bbb6)
+  ![Circuital Diagram S1-T12](https://github.com/srijan-06/dds/blob/main/Snapshots/functional.png)
   
 </details>
 
@@ -206,7 +206,7 @@ This model provides a systematic approach to balance water supply, demand, and t
        point of time to match and analyze at different circumstances.
     c. [IMP] You can also start with FIlling the Water Reservoir First and then Add the Population.
     ### Main Circuit
-   ![main](https://github.com/user-attachments/assets/30c8ba42-f7d7-4a4b-9137-bdd8a624d4a8)
+   ![main](https://github.com/srijan-06/dds/blob/main/Snapshots/main.png)
   
   ### 3-Bit Adder
    ![3-bit-adder](https://github.com/srijan-06/dds/blob/main/Snapshots/3-bit%20Adder.png?raw=true)
@@ -683,7 +683,7 @@ This section is dedicated towards the Verilog implementation of the District Sew
   Overall, the hardware implementation allows for a functional and interactive demonstration of the water management system, simulating realistic scenarios in water distribution and consumption while ensuring the efficient operation of the system through simplified, yet effective, hardware components.
 
 Here is a pictorial view of our simplified circuit generated using Logisim:
-![S1-T12_Simplified]([https://github.com/user-attachments/assets/b6b60c40-a5c2-4dbb-8e8a-3c599845f3bd](https://github.com/srijan-06/dds/blob/main/Logisim/S1-T12_Simplified_v3.circ))
+![S1-T12_Simplified](https://github.com/srijan-06/dds/blob/main/Snapshots/abcabc.png)
 
 
 </details>
