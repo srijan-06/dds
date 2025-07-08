@@ -683,7 +683,7 @@ This section is dedicated towards the Verilog implementation of the District Sew
   Overall, the hardware implementation allows for a functional and interactive demonstration of the water management system, simulating realistic scenarios in water distribution and consumption while ensuring the efficient operation of the system through simplified, yet effective, hardware components.
 
 Here is a pictorial view of our simplified circuit generated using Logisim:
-![S1-T12_Simplified](https://github.com/user-attachments/assets/b6b60c40-a5c2-4dbb-8e8a-3c599845f3bd)
+![S1-T12_Simplified]([https://github.com/user-attachments/assets/b6b60c40-a5c2-4dbb-8e8a-3c599845f3bd](https://github.com/srijan-06/dds/blob/main/Logisim/S1-T12_Simplified_v3.circ))
 
 
 </details>
