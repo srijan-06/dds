@@ -141,17 +141,17 @@ The project is broken down into the following steps:
 ### State-Diagrams
 
 #### State Diagram of The Water Reservoir -
- ![6-bit-reservoir](https://github.com/user-attachments/assets/8e7f394e-c529-433b-a390-0557466765b0)
+![6-bit-reservoir](https://github.com/srijan-06/dds/blob/main/Snapshots/6-bit-reservoir.png?raw=true)
 
 #### State Diagram of The City's Population -
- ![4-bit-city](https://github.com/user-attachments/assets/0ede6cce-d92f-4e4a-9a65-23f4a3dc8ef7)
+![4-bit-city](https://github.com/srijan-06/dds/blob/main/Snapshots/4-bit-city.png?raw=true)
 
 #### State Diagram of The Town's Population -
- ![3-bit-town](https://github.com/user-attachments/assets/5ee82e74-a099-4554-ad1a-bd057ae0a07a)
-
+![3-bit-town](https://github.com/srijan-06/dds/blob/main/Snapshots/3-bit-town.png?raw=true)
 
 ### Truth-Table
-  ![truth-table](https://github.com/user-attachments/assets/d3e06139-5bd7-46c8-bfab-8cbf080e6045)
+![truth-table](https://github.com/srijan-06/dds/blob/main/Snapshots/truth-table.png?raw=true)
+
 
 
 ### Summary of the Process
