@@ -178,7 +178,7 @@ This model provides a systematic approach to balance water supply, demand, and t
 <details>
   <summary>Click to View</summary>
   
-  The [Logisim](https://github.com/cs131-231nitk/DDS_Project-S1-T12/tree/main/Logisim) folder consists the Logisim File of the DSWB: District Sewage and Water Board circuit.
+  The [Logisim]([https://github.com/cs131-231nitk/DDS_Project-S1-T12/tree/main/Logisim](https://github.com/srijan-06/dds/tree/main/Logisim)) folder consists the Logisim File of the DSWB: District Sewage and Water Board circuit.
   
     STEPS to use the .circ file (Overall Circuit):
 
